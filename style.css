@@ -1,0 +1,159 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.wrapper{
+	position: relative;
+	width: 100%;
+	height:100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)),url('https://images.pexels.com/photos/259735/pexels-photo-259735.jpeg?auto=compress&cs=tinysrgb');
+	background-size: cover;
+	background-position: center;
+}
+.wrapper .heading{
+	position: relative;
+	color: #ff0;
+	font-size: 3rem;
+}
+.wrapper .date{
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.wrapper .date span{
+	color: #ff0;
+}
+.wrapper .todo{
+	position: relative;
+	width: 50%;
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+.wrapper .todo .addToDo{
+	position: relative;
+	width: 100%;
+	height: 40px;
+}
+.wrapper .todo .addToDo form{
+	position: relative;
+	height: inherit;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.wrapper .todo .addToDo form input{
+	position: relative;
+	height: inherit;
+}
+.wrapper .todo .addToDo form input[type="text"]{
+	width: 90%;
+	outline: none;
+	-webkit-appearance:none;
+	appearance:none;
+	border:0;
+	background:transparent;
+	padding:10px 15px;
+	color: #fff;
+	font-size: 1.2rem;
+	border-bottom:1.5px solid #fff;
+	transition: 0.3s border;
+}
+.wrapper .todo .addToDo form input[type="text"]::placeholder{
+	color: #fff;
+}
+.wrapper .todo .addToDo form input[type="text"]:focus::placeholder{
+	color: #aaa;
+}
+.wrapper .todo .addToDo form input[type="submit"]{
+	width: 10%;
+	cursor: pointer;
+	background:#017bf5f5;
+	border:  none;
+	color: #000;
+	font-weight: 500;
+	margin-left:5px;
+	color: #fff;
+	font-weight: 550;
+	font-size: 1rem;
+}
+.wrapper .todo .addToDo form input[type="submit"]:hover{
+	background:#017bf5;
+}
+.wrapper .todo .list{
+	position: relative;
+	height: 350px;
+	width: 100%;
+	background:#fff;
+	margin-top: 5%;
+	overflow-x: hidden;
+	overflow-y:auto;
+	background: transparent;
+	display: block;
+}
+.wrapper .todo .list .listItem{
+	position: relative;
+	display: flex;
+	height: 50px;
+	width: 100%;
+	color: #ff0;
+	display: flex;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.05);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
+	text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
+	margin:1px 0;
+}
+.wrapper .todo .list .listItem:hover{
+	background-color: rgba(255, 255, 255, 0.25);
+}
+.wrapper .todo .list .listItem input{
+	-webkit-appearance:none;
+	appearance:none;
+	position: relative;
+	height: 30px;
+	width: 30px;
+	border:2px solid #fff;
+	margin-left: 10%;
+	outline: none;
+	cursor: pointer;
+}
+.wrapper .todo .list .listItem input:checked::before{
+	position: absolute;
+	content: '';
+	height: 80%;
+	width: 3px;
+	background-color: #ff0;
+	top: 10%;
+	left: 0%;
+	transform: rotate(-45deg);
+}
+.wrapper .todo .list .listItem input:checked::after{
+	position: absolute;
+	content: '';
+	height: 130%;
+	width: 3px;
+	background-color: #ff0;
+	top: -40%;
+	left: 60%;
+	transform: rotate(35deg);
+}
+.wrapper .todo .list .listItem h1{
+	position: relative;
+	width: 80%;
+	text-align: center;
+	font-size: 2.2rem;
+}
